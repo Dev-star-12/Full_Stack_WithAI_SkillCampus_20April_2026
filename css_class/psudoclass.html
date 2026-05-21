@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: green;
+        }
+        h1:hover{
+            color: red;
+            cursor: pointer;
+        }
+        .box{
+            background-color: blue;
+            width: 300px;
+            height: 100px;
+            border: 5px solid green;
+        }
+        .box:hover{
+            width: 100%;
+            border: 10px solid red;
+        }
+        button{
+            border: none;
+            background-color: white;
+        }
+        button:hover{
+            border: 1px solid red;
+            padding: 5px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #i1{
+            background-color: black;
+            border: 2px solid pink;
+            border-radius: 3px;
+        }
+        #i1:focus{
+            background-color: brown;
+            outline: none;
+            color: white;
+        }
+
+       ul li:first-child{
+            font-size: 30px;
+            color: red;
+        }
+
+       ul li:last-child{
+            font-size: 40px;
+            color: green;
+        }
+
+        ol li:nth-child(odd){
+            color: blue;
+        }
+
+        ol li:nth-child(even){
+            color: darkgoldenrod;
+            font-size: 20px;
+        }
+
+        #i2:required{
+            border: 2px solid red;
+        }
+
+        #check{
+            accent-color: yellow;
+            width: 20px;
+            height: 20px;
+        }
+
+        #check:checked{
+            width: 30px;
+            height: 30px;
+        }
+
+        #disable:disabled{
+            color: blue;
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>SkillCampus 🥺</h1>
+    <!-- <div class="box"></div> -->
+    <button>Fresh</button>
+    <input type="text" name="" id="i1">
+    <ul>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+    </ul>
+
+    <ol>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+    </ol>
+
+    <form action="">
+        <input type="text" name="" id="i2" required>
+        <input type="checkbox" name="" id="check">
+        <input type="reset" value="Reset" disabled id="disable">
+        <button type="submit">Submit</button>
+    </form>
+
+    
+
+</body>
+</html>

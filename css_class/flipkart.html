@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: auto;
+            width: 250px;
+            height: 350px;
+            border: 2px solid black;
+            border-radius: 5px;
+            position: relative;
+        }
+        .card{
+            background-color: tomato;
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            bottom: 0;
+            transition: transform 1.5s linear;
+        }
+        .card:hover{
+            transform: translateY(-20px);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="card"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: red;
+        }
+        h1::before{
+            content: "😍";
+        }
+        h1::after{
+            content: "🍎";
+        }
+        form label::after{
+            content: "*";
+            color: red;
+        }
+        p::first-letter{
+            font-size: 30px;
+            color: green;
+        }
+        p::first-line{
+            color: brown;
+        }
+
+        p::selection{
+            background-color: black;
+            color: white;
+        }
+
+        form input::placeholder{
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Hello GoodEvening</h1>
+    <form action="">
+        <label for="">FirstName</label>
+        <input type="text" name="" id="" placeholder="Type first name ..">
+    </form>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rem aliquam sint beatae reiciendis autem dolores eveniet iste? Magni aliquid laborum rerum sit sint fuga asperiores necessitatibus culpa, ea neque, voluptas architecto impedit molestiae accusantium. Ratione necessitatibus quo culpa enim?</p>
+</body>
+</html>
