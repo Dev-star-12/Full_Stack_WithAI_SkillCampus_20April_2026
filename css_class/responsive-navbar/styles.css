@@ -1,0 +1,195 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #333;
+  background: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: #1a1a2e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 64px;
+}
+
+/* ===== Logo ===== */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e94560;
+  letter-spacing: 1px;
+  transition: opacity 0.2s;
+}
+
+.navbar-logo:hover {
+  opacity: 0.85;
+}
+
+/* ===== Nav Links (Desktop) ===== */
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+  background: rgba(233, 69, 96, 0.15);
+}
+
+.nav-link.active {
+  color: #e94560;
+  font-weight: 600;
+}
+
+/* ===== Hamburger Toggle (hidden on desktop) ===== */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #ccc;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -7px;
+}
+
+.hamburger::after {
+  top: 7px;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #16213e;
+    padding: 0.5rem 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-link {
+    padding: 0.85rem 1.5rem;
+    border-radius: 0;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(233, 69, 96, 0.12);
+  }
+
+  /* Open state */
+  .nav-toggle:checked ~ .nav-links {
+    max-height: 350px;
+    padding: 0.5rem 0;
+  }
+
+  /* Animate hamburger → X */
+  .nav-toggle:checked ~ .nav-toggle-label .hamburger {
+    background: transparent;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+/* ===== Hero Section (demo content) ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 64px);
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  max-width: 560px;
+  color: #555;
+  line-height: 1.6;
+}
