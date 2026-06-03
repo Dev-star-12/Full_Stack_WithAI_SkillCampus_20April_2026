@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            border: 4px solid brown;
+            height: 500px;
+            display: grid;
+            gap: 15px;
+            grid-template-areas: 
+            "header header header header"
+            "left left left main"
+            "footer footer footer footer"
+            ;
+        }
+
+        .container > div{
+            border: 3px solid green;
+        }
+
+        .box1{
+            grid-area: header;
+        }
+
+        .box2{
+            grid-area: left;
+        }
+
+        .box3{
+            grid-area: main;
+        }
+
+        .box4{
+            grid-area: footer;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Header</div>
+        <div class="box2">Left</div>
+        <div class="box3">Main</div>
+        <div class="box4">Footer</div>
+    
+    </div>
+</body>
+</html>

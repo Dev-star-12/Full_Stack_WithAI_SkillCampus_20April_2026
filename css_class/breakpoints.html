@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            width: 400px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: auto;
+
+        }
+
+
+        /* Mobile */
+        @media (min-width:480px){
+            .box{
+                width: 100%;
+                background-color: brown;
+            }
+        }
+        /* Tablet */
+        @media (min-width:768px){
+            .box{
+                width: 80%;
+                background-color: green;
+            }
+        }
+        /* Laptop */
+        @media (min-width:1024px){
+            .box{
+                width: 100%;
+                background-color: yellow;
+            }
+        }
+        /* Large Screen */
+        @media (min-width:1200px){
+            .box{
+                width: 100%;
+                background-color: orange;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

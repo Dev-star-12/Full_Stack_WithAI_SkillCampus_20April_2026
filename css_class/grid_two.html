@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: grid;
+            gap: 10px;
+            height: 800px;
+            grid-template-columns: 200px 200px;
+            grid-template-rows: 300px 300px;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            
+        }
+        .container > div{
+            border: 2px solid green;
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+      
+    </div>
+</body>
+</html>

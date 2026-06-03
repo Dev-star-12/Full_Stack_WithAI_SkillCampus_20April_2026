@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(249, 197, 214);
+        }
+        h1{
+            font-size: 50px;
+            border-right: 4px solid black;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+           animation: typing 6s steps(24) infinite, blink 0.5s infinite;
+           
+        }
+
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+            to{
+                width: 670px;
+            }
+        }
+
+        @keyframes blink{
+            50%{
+                border-color: transparent;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Welcome Web Developers 😍</h1>
+</body>
+</html>

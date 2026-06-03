@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 4px solid black;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+            background-color: brown;
+            color: white;
+            animation-name: color_change;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes color_change{
+            from{
+                background-color: yellow;
+            }
+            to{
+                background-color: orange;
+            }
+        }
+
+        .box2{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            animation-name: move_box;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes move_box{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(1000px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">Change Color</div>
+    <div class="box2">Move box</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: palevioletred;
+        }
+        .card{
+            width: 250px;
+            height: 350px;
+            background-color: black;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 2px 20px rgba(86, 86, 253, 0.696);
+            animation-name: float;
+            animation-duration:2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+
+        }
+        .image{
+            width: 230px;
+            height: 230px;
+          margin: auto;
+          border-radius: 30px;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes float {
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-30px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="https://img.magnific.com/premium-psd/credit-card-mockup-with-blank-space_1486221-287.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+        </div>
+        <h1>Hello Guys 😍</h1>
+        
+    </div>
+</body>
+</html>

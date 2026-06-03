@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(105, 185, 157);
+        padding: 15px;
+      }
+
+      .main {
+        background-color: #fff;
+        min-height: 100vh;
+        border: 2px solid #bcbcbc;
+        overflow: hidden;
+      }
+
+      .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 80px;
+      }
+      .navbar .logo {
+        font-size: 34px;
+        font-weight: bold;
+        color: rgb(173, 214, 220);
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+      }
+
+      .hero {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 80px;
+        gap: 50px;
+      }
+
+      .left{
+        flex: 1;
+      }
+
+      .left h1{
+        font-size: 50px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+      }
+
+      .left h1 span{
+        color: rgb(173, 214, 220);
+      }
+
+      .hero p{
+        font-size: 25px ;
+        color: rgba(133, 133, 133, 0.735);
+        margin-bottom: 20px;
+       
+       
+      }
+
+      .btn{
+        display: inline-flex;
+        align-items: center ;
+        gap: 12px;
+        background-color: rgb(105, 185, 157);
+        padding: 18px 34px;
+         color: white;
+        text-decoration: none;
+         border-radius: 6px;
+      }
+
+      .right{
+        flex: 1;
+      }
+
+      .right img{
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
+      }
+
+      @media (max-width:1050px){
+        .navbar{
+             padding: 30px 50px;
+        }
+        .hero{
+            flex-direction: column;
+            padding: 40px;
+        }
+         .left h1{
+            font-size: 30px;
+        }
+        .left p{
+            font-size: 18px ;
+        }
+      }
+
+      @media (max-width:576px){
+        .navbar{
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 30px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navbar">
+        <div class="logo">Treine.me</div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Training</li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <div class="left">
+          <h1>
+            WORKOUTS MADE
+            <span>EXCLUSIVE</span>
+            FOR YOU!
+          </h1>
+          <p>
+            We create exclusive and unique workouts for you. Invest in your body
+            and get much more performance and quality of life.
+          </p>
+          <a href="" class="btn">Start Now</a>
+        </div>
+        <div class="right">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/000/177/970/small/personal-trainers-01.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

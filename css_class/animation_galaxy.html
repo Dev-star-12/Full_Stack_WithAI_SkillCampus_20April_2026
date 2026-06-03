@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .sun{
+            width: 120px;
+            height: 120px;
+            background-color: orange;
+            border-radius: 100%;
+            box-shadow: 0 0 40px orange;
+            position: relative;
+
+        }
+
+        .orbit{
+            position: absolute;
+            border: 1px solid white;
+            border-radius: 100%;
+            width: 250px;
+            height: 250px;
+            top: -65px;
+            left: -65px;
+            animation: rotate 7s infinite linear;
+        }
+
+        .planet{
+            width: 40px;
+            height: 40px;
+            background-color: brown;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+        }
+
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="sun">
+        <div class="orbit">
+            <div class="planet"></div>
+        </div>
+    </div>
+</body>
+</html>
