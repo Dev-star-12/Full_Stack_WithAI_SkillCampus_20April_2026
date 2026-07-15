@@ -1,0 +1,8 @@
+{
+    "name":"Dev",
+    "age":67,
+    "address":{
+        "city":"jaipur",
+        "pincode":456789
+    }
+}

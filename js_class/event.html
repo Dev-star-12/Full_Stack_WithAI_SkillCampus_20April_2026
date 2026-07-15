@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: green;
+        color: white;
+        padding: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello JavaScript..🥺</h1>
+    <button onclick="Theme()" id="themebtn">Dark</button>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, quaerat
+      harum! Reprehenderit, omnis? Architecto eaque ex excepturi provident minus
+      odio vitae distinctio atque. Iste voluptatem alias exercitationem vero
+      repudiandae animi!
+    </p>
+
+    <div class="box">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, odit
+      iusto. Vitae quis voluptas, reiciendis voluptates autem ex aliquid iste.
+      <h1
+        style="text-align: center; cursor: pointer"
+        id="heart"
+        ondblclick="like()"
+      >
+        🤍
+      </h1>
+    </div>
+
+    <input type="color" name="" id="color" onchange="colorPick()" />
+
+    <input type="password" name="" id="pass" />
+    <button onclick="password()" id="passbtn">Show</button>
+
+    <h2 id="type"></h2>
+    <textarea name="" id="count" oninput="typesCount()"></textarea>
+
+    <h1 id="sub">JavaScript</h1>
+    <button id="btn">Change Sub</button>
+
+    <script>
+
+        let subChange = document.getElementById("btn")
+
+        subChange.addEventListener("click",()=>{
+            document.getElementById("sub").innerText = "Python"
+        })
+
+
+      function like() {
+        document.getElementById("heart").innerText = "❤️";
+      }
+
+      function typesCount() {
+        const text = document.getElementById("type");
+        const count = document.getElementById("count");
+
+        text.innerText = `Type Counts:- ${count.value.length}`;
+      }
+
+      function password() {
+        let value = document.getElementById("pass");
+        if (value.type === "password") {
+          value.type = "text";
+          document.getElementById("passbtn").innerText = "Hide";
+        } else {
+          value.type = "password";
+          document.getElementById("passbtn").innerText = "Show";
+        }
+      }
+
+      function Theme() {
+        let bgColor = document.body.style.backgroundColor;
+
+        if (bgColor === "" || bgColor === "white") {
+          document.body.style.backgroundColor = "black";
+          document.body.style.color = "white";
+          document.getElementById("themebtn").innerText = "Light";
+        } else {
+          document.body.style.backgroundColor = "white";
+          document.body.style.color = "black";
+          document.getElementById("themebtn").innerText = "Dark";
+        }
+      }
+
+      function colorPick() {
+        let a = document.getElementById("color").value;
+        document.getElementsByClassName("box")[0].style.backgroundColor = a;
+      }
+    </script>
+  </body>
+</html>
